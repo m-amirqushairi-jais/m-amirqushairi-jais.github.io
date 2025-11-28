@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: '/m-amirqushairi-jais.github.io',
 };
 
 export default nextConfig;
