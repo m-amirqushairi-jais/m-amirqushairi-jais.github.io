@@ -1,27 +1,27 @@
-import { notFound } from 'next/navigation';
+import { notFound } from "next/navigation";
 
 // Project data
 const projects = {
-  'multiplayer-rpg': {
-    title: 'Multiplayer Action RPG',
-    subtitle: 'Unity-based multiplayer game with roguelike elements',
-    tags: ['Unity', 'C#', 'Multiplayer', 'Anti-Cheat'],
-    overview: 'A fast-paced multiplayer action RPG featuring procedurally generated dungeons, real-time combat, and robust anti-cheat systems. Built to support 50-100+ concurrent players with sub-50ms latency.',
-    challenge: 'Creating a secure, scalable multiplayer experience that prevents cheating while maintaining low latency and supporting dynamic player counts.',
-    solution: 'Implemented server-side validation for all critical game actions, event-driven anti-cheat checkpoints, and optimized networking using Unity DOTS.',
-    techStack: ['Unity', 'C#', 'DOTS', 'WebSocket', 'MongoDB', 'AWS'],
+  "multiplayer-rpg": {
+    title: "Multiplayer Action RPG",
+    subtitle: "Unity-based multiplayer game with roguelike elements",
+    tags: ["Unity", "C#", "Multiplayer", "Anti-Cheat"],
+    overview:
+      "A fast-paced multiplayer action RPG featuring procedurally generated dungeons, real-time combat, and robust anti-cheat systems. Built to support 50-100+ concurrent players with sub-50ms latency.",
+    challenge:
+      "Creating a secure, scalable multiplayer experience that prevents cheating while maintaining low latency and supporting dynamic player counts.",
+    solution:
+      "Implemented server-side validation for all critical game actions, event-driven anti-cheat checkpoints, and optimized networking using Unity DOTS.",
+    techStack: ["Unity", "C#", "DOTS", "WebSocket", "MongoDB", "AWS"],
     features: [
-      'Server-side damage validation and anti-cheat',
-      'Event-driven checkpoint system',
-      'Real-time multiplayer with <50ms latency',
-      'Procedurally generated dungeons',
-      'Scalable server architecture'
+      "Server-side damage validation and anti-cheat",
+      "Event-driven checkpoint system",
+      "Real-time multiplayer with <50ms latency",
+      "Procedurally generated dungeons",
+      "Scalable server architecture",
     ],
-    video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    images: [
-      '/projects/rpg-screenshot1.jpg',
-      '/projects/rpg-screenshot2.jpg'
-    ],
+    video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    images: ["/projects/rpg-screenshot1.jpg", "/projects/rpg-screenshot2.jpg"],
     codeExample: `// Server-side damage validation
 public class DamageValidator {
     private readonly ICheckpointService _checkpoints;
@@ -70,27 +70,30 @@ public class DamageValidator {
 │   MongoDB       │  ← Player data, game state
 │   Cluster       │
 └─────────────────┘`,
-    liveDemo: 'https://example.com/demo',
+    liveDemo: "https://example.com/demo",
     githubLink: null,
   },
-  'iap-validation': {
-    title: 'IAP Validation Server',
-    subtitle: 'Secure in-app purchase validation service',
-    tags: ['Python', 'FastAPI', 'MongoDB', 'Azure'],
-    overview: 'Production-grade microservice for validating in-app purchases from Apple App Store and Google Play Store, preventing fraudulent transactions and ensuring secure payment processing.',
-    challenge: 'Need to validate purchase receipts from multiple platforms while handling high traffic, preventing replay attacks, and maintaining sub-100ms response times.',
-    solution: 'Built FastAPI-based microservice with receipt caching, MongoDB for transaction logging, and Azure Functions for scalability.',
-    techStack: ['Python', 'FastAPI', 'MongoDB', 'Azure Functions', 'Redis'],
+  "iap-validation": {
+    title: "IAP Validation Server",
+    subtitle: "Secure in-app purchase validation service",
+    tags: ["Python", "FastAPI", "MongoDB", "Azure"],
+    overview:
+      "Production-grade microservice for validating in-app purchases from Apple App Store and Google Play Store, preventing fraudulent transactions and ensuring secure payment processing.",
+    challenge:
+      "Need to validate purchase receipts from multiple platforms while handling high traffic, preventing replay attacks, and maintaining sub-100ms response times.",
+    solution:
+      "Built FastAPI-based microservice with receipt caching, MongoDB for transaction logging, and Azure Functions for scalability.",
+    techStack: ["Python", "FastAPI", "MongoDB", "Azure Functions", "Redis"],
     features: [
-      'Apple App Store receipt validation',
-      'Google Play Store receipt validation',
-      'Receipt caching with Redis',
-      'Transaction logging and analytics',
-      'Replay attack prevention',
-      'Auto-scaling with Azure Functions'
+      "Apple App Store receipt validation",
+      "Google Play Store receipt validation",
+      "Receipt caching with Redis",
+      "Transaction logging and analytics",
+      "Replay attack prevention",
+      "Auto-scaling with Azure Functions",
     ],
     video: null,
-    images: ['/projects/iap-dashboard.jpg'],
+    images: ["/projects/iap-dashboard.jpg"],
     codeExample: `# Apple IAP Receipt Validation
 from fastapi import FastAPI, HTTPException
 import httpx
@@ -152,25 +155,37 @@ async def validate_apple_receipt(receipt_data: str, user_id: str):
     liveDemo: null,
     githubLink: null,
   },
-  'dev-infrastructure': {
-    title: 'Self-Hosted Dev Infrastructure',
-    subtitle: 'Complete Azure-based development environment',
-    tags: ['Azure', 'Docker', 'CI/CD', 'DevOps'],
-    overview: 'Comprehensive self-hosted development infrastructure on Azure, featuring Git hosting, databases, CI/CD pipelines, and automated backups.',
-    challenge: 'Setting up a cost-effective, secure, and scalable development infrastructure that rivals commercial solutions.',
-    solution: 'Leveraged Azure VMs, Docker containers, nginx reverse proxy, and automated backup scripts to create a professional dev environment.',
-    techStack: ['Azure', 'Docker', 'Nginx', 'Gitea', 'Jenkins', 'PostgreSQL', 'MongoDB', 'Let\'s Encrypt'],
+  "dev-infrastructure": {
+    title: "Self-Hosted Dev Infrastructure",
+    subtitle: "Complete Azure-based development environment",
+    tags: ["Azure", "Docker", "CI/CD", "DevOps"],
+    overview:
+      "Comprehensive self-hosted development infrastructure on Azure, featuring Git hosting, databases, CI/CD pipelines, and automated backups.",
+    challenge:
+      "Setting up a cost-effective, secure, and scalable development infrastructure that rivals commercial solutions.",
+    solution:
+      "Leveraged Azure VMs, Docker containers, nginx reverse proxy, and automated backup scripts to create a professional dev environment.",
+    techStack: [
+      "Azure",
+      "Docker",
+      "Nginx",
+      "Gitea",
+      "Jenkins",
+      "PostgreSQL",
+      "MongoDB",
+      "Let's Encrypt",
+    ],
     features: [
-      'Self-hosted Git repositories (Gitea)',
-      'CI/CD pipelines (Jenkins)',
-      'PostgreSQL with pgAdmin',
-      'MongoDB with Mongo Express',
-      'SSL certificates (Let\'s Encrypt)',
-      'Automated backup system',
-      'Nginx reverse proxy'
+      "Self-hosted Git repositories (Gitea)",
+      "CI/CD pipelines (Jenkins)",
+      "PostgreSQL with pgAdmin",
+      "MongoDB with Mongo Express",
+      "SSL certificates (Let's Encrypt)",
+      "Automated backup system",
+      "Nginx reverse proxy",
     ],
     video: null,
-    images: ['/projects/infra-dashboard.jpg'],
+    images: ["/projects/infra-dashboard.jpg"],
     codeExample: `# Docker Compose for Development Infrastructure
 version: '3.8'
 
@@ -250,12 +265,135 @@ networks:
 │  (Docker Containers)               │
 └─────────────────────────────────────┘`,
     liveDemo: null,
-    githubLink: 'https://github.com/m-amirqushairi-jais/dev-infrastructure',
-  }
+    githubLink: "https://github.com/m-amirqushairi-jais/dev-infrastructure",
+  },
+  "changokushi-heroes": {
+    title: "Changokushi! Heroes",
+    subtitle: "Fantasy Shooting bishoujo RPG with NFT Integration",
+    tags: ["Unity", "Mobile Game", "RPG", "NFT", "Blockchain"],
+    overview:
+      "A Fantasy Shooting bishoujo RPG where players take on the role of beautiful warlords from the Three Kingdoms period. Features Japanese voice acting talent, unique character abilities, and integrated NFT marketplace for character trading and ownership.",
+    challenge:
+      "Creating a mobile RPG with blockchain integration, implementing NFT minting and trading systems while maintaining smooth gameplay experience. Supporting multiple regions and languages while handling high transaction volumes on the NFT marketplace.",
+    solution:
+      "Built on Unity with custom server architecture supporting NFT operations. Implemented KUSO Geeeeee NFT marketplace integration for character ownership and trading. Optimized mobile performance while handling blockchain transactions seamlessly.",
+    techStack: [
+      "Unity",
+      "C#",
+      "NFT/Blockchain",
+      "Mobile Development",
+      "Node.js",
+      "MongoDB",
+    ],
+    features: [
+      "Fantasy Shooting RPG gameplay with beautiful warlord characters",
+      "NFT character ownership and marketplace trading",
+      "Japanese voice acting with unique character traits",
+      "Multi-region support (Japan, Taiwan, Malaysia, South Korea, Canada, Mexico, Turkey, Thailand, Singapore, Indonesia, India)",
+      "In-app purchases and NFT integration",
+      "Real-time character development and combat arts system",
+    ],
+    video: null,
+    images: [
+      "/projects/changokushi-app-store.jpg",
+      "/projects/changokushi-gameplay.jpg",
+      "/projects/changokushi-characters.jpg",
+      "/projects/changokushi-nft-marketplace.jpg",
+    ],
+    codeExample: `// NFT Character Minting System
+public class NFTCharacterMinter : MonoBehaviour {
+    private Web3Provider web3;
+    private CharacterContract characterContract;
+    
+    public async Task<NFTCharacter> MintCharacter(
+        string characterId,
+        int rarity,
+        string playerWalletAddress
+    ) {
+        try {
+            // Generate unique token metadata
+            var metadata = new CharacterMetadata {
+                CharacterId = characterId,
+                Rarity = rarity,
+                MintDate = DateTime.UtcNow,
+                Attributes = GenerateCharacterAttributes(rarity)
+            };
+            
+            // Upload metadata to IPFS
+            string metadataUri = await UploadToIPFS(metadata);
+            
+            // Mint NFT on blockchain
+            var transaction = await characterContract.MintCharacter(
+                playerWalletAddress,
+                metadataUri,
+                rarity
+            );
+            
+            // Wait for confirmation
+            await transaction.Wait();
+            
+            // Log to game database
+            await LogNFTMint(characterId, transaction.Hash);
+            
+            return new NFTCharacter {
+                TokenId = transaction.TokenId,
+                Owner = playerWalletAddress,
+                MetadataUri = metadataUri
+            };
+        } catch (Exception ex) {
+            LogError($"NFT minting failed: {ex.Message}");
+            throw;
+        }
+    }
+    
+    private CharacterAttributes GenerateCharacterAttributes(int rarity) {
+        return new CharacterAttributes {
+            Attack = CalculateStat(rarity, StatType.Attack),
+            Defense = CalculateStat(rarity, StatType.Defense),
+            Speed = CalculateStat(rarity, StatType.Speed),
+            SpecialAbility = GetSpecialAbility(rarity)
+        };
+    }
+}`,
+    infrastructure: `┌─────────────────────────────────────┐
+│         Mobile Clients              │
+│    (iOS & Android - Unity)          │
+└────────────┬────────────────────────┘
+             │
+┌────────────▼────────────────────────┐
+│      API Gateway / Load Balancer    │
+└────────────┬────────────────────────┘
+             │
+    ┌────────┼────────┬───────────┐
+    │        │        │           │
+┌───▼──┐ ┌──▼──┐ ┌───▼────┐ ┌───▼────┐
+│Game  │ │NFT  │ │Payment │ │Analytics│
+│Server│ │API  │ │Service │ │Service  │
+└───┬──┘ └──┬──┘ └───┬────┘ └───┬────┘
+    │       │        │           │
+    └───────┼────────┴───────────┘
+            │
+    ┌───────┴────────┬──────────┐
+    │                │          │
+┌───▼────┐   ┌──────▼──┐  ┌───▼────┐
+│MongoDB │   │Blockchain│  │Redis   │
+│(Game   │   │Network   │  │Cache   │
+│Data)   │   │(NFT)     │  │        │
+└────────┘   └──────────┘  └────────┘`,
+    liveDemo: "https://changokushi-heroes.jp/",
+    githubLink: null,
+    appStoreLink: "https://apps.apple.com/app/id...",
+    playStoreLink:
+      "https://play.google.com/store/apps/details?id=com.okakichi.changokushi",
+  },
 };
 
 // Make the component async and await params
-export default async function ProjectDetail({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ProjectDetail({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   // Await the params Promise
   const { slug } = await params;
   const project = projects[slug as keyof typeof projects];
@@ -269,14 +407,22 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       {/* Header */}
       <section className="border-b bg-gray-50">
         <div className="container mx-auto px-5 py-16">
-          <a href="/portfolio" className="text-gray-600 hover:text-gray-900 mb-4 inline-block">
+          <a
+            href="/portfolio"
+            className="text-gray-600 hover:text-gray-900 mb-4 inline-block"
+          >
             ← Back to Portfolio
           </a>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">{project.title}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+            {project.title}
+          </h1>
           <p className="text-xl text-gray-600 mb-6">{project.subtitle}</p>
           <div className="flex flex-wrap gap-2">
-            {project.tags.map(tag => (
-              <span key={tag} className="px-3 py-1 bg-gray-200 text-gray-800 rounded text-sm">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1 bg-gray-200 text-gray-800 rounded text-sm"
+              >
                 {tag}
               </span>
             ))}
@@ -298,10 +444,37 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
         </section>
       )}
 
+      {/* Images Gallery */}
+      {project.images && project.images.length > 0 && (
+        <section className="container mx-auto px-5 py-12">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">
+              Screenshots
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {project.images.map((image, index) => (
+                <div
+                  key={index}
+                  className="relative aspect-video rounded-lg overflow-hidden shadow-lg"
+                >
+                  <img
+                    src={image}
+                    alt={`${project.title} screenshot ${index + 1}`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Overview */}
       <section className="container mx-auto px-5 py-12 max-w-4xl">
         <h2 className="text-3xl font-bold mb-6 text-gray-900">Overview</h2>
-        <p className="text-lg text-gray-700 leading-relaxed mb-8">{project.overview}</p>
+        <p className="text-lg text-gray-700 leading-relaxed mb-8">
+          {project.overview}
+        </p>
 
         <div className="grid md:grid-cols-2 gap-8">
           <div>
@@ -318,7 +491,9 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       {/* Features */}
       <section className="border-t bg-gray-50">
         <div className="container mx-auto px-5 py-12 max-w-4xl">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Key Features</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">
+            Key Features
+          </h2>
           <ul className="grid md:grid-cols-2 gap-4">
             {project.features.map((feature, index) => (
               <li key={index} className="flex items-start gap-2">
@@ -334,8 +509,11 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       <section className="container mx-auto px-5 py-12 max-w-4xl">
         <h2 className="text-3xl font-bold mb-6 text-gray-900">Tech Stack</h2>
         <div className="flex flex-wrap gap-3">
-          {project.techStack.map(tech => (
-            <span key={tech} className="px-4 py-2 bg-gray-100 text-gray-900 rounded-lg font-medium">
+          {project.techStack.map((tech) => (
+            <span
+              key={tech}
+              className="px-4 py-2 bg-gray-100 text-gray-900 rounded-lg font-medium"
+            >
               {tech}
             </span>
           ))}
@@ -346,7 +524,9 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       {project.codeExample && (
         <section className="border-t bg-gray-50">
           <div className="container mx-auto px-5 py-12 max-w-4xl">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">Code Example</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">
+              Code Example
+            </h2>
             <pre className="bg-gray-900 text-gray-100 p-6 rounded-lg overflow-x-auto">
               <code>{project.codeExample}</code>
             </pre>
@@ -357,7 +537,9 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       {/* Infrastructure */}
       {project.infrastructure && (
         <section className="container mx-auto px-5 py-12 max-w-4xl">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Infrastructure</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">
+            Infrastructure
+          </h2>
           <pre className="bg-gray-100 text-gray-900 p-6 rounded-lg overflow-x-auto font-mono text-sm">
             {project.infrastructure}
           </pre>
@@ -369,7 +551,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
         <div className="container mx-auto px-5 py-12 max-w-4xl">
           <div className="flex gap-4">
             {project.liveDemo && (
-              <a 
+              <a
                 href={project.liveDemo}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -379,7 +561,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
               </a>
             )}
             {project.githubLink && (
-              <a 
+              <a
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -398,8 +580,9 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 // CRITICAL: For static export, we must generate all possible paths
 export async function generateStaticParams() {
   return [
-    { slug: 'multiplayer-rpg' },
-    { slug: 'iap-validation' },
-    { slug: 'dev-infrastructure' },
+    { slug: "multiplayer-rpg" },
+    { slug: "iap-validation" },
+    { slug: "dev-infrastructure" },
+    { slug: "changokushi-heroes" },
   ];
 }
